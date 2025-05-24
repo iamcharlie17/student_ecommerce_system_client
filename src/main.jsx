@@ -40,17 +40,49 @@ const router = createBrowserRouter([
   },
   {
     path: "/item/:id",
-    element: <ItemDetails/>
+    element: <ItemDetails />,
   },
   {
     path: "/account",
-    element: <MyAccountLayout/>,
+    element: <MyAccountLayout />,
     children: [
       {
         index: true,
         element: <Ads/>
-      }
-    ]
+      },
+      {
+        path:"my-ads",
+        element: <Ads />,
+      },
+      {
+        path: "membership",
+        element: <div>No Membership</div>,
+      },
+      {
+        path: "saved",
+        element: <div>No History of search</div>,
+      },
+      {
+        path: "favorites",
+        element: <div>No Favorites Item</div>,
+      },
+      {
+        path: "settings",
+        element: <div>Settings comming</div>,
+      },
+      {
+        path: "phones",
+        element: <div>Phones comming..</div>,
+      },
+      {
+        path: "job-profile",
+        element: <div>Job Profile Comming</div>,
+      },
+      {
+        path: "database",
+        element: <div>Student Database</div>,
+      },
+    ],
   },
   {
     path: "/dashboard",
