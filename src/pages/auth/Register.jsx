@@ -17,10 +17,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // if (!email.endsWith("@iut-dhaka.edu")) {
-    //   toast.error("Email must be a valid @iut-dhaka.edu address");
-    //   return;
-    // }
+    if (!email.endsWith("@iut-dhaka.edu")) {
+      toast.error("Email must be a valid @iut-dhaka.edu address");
+      return;
+    }
 
     try {
       await register(fullName, email, password, navigate);
