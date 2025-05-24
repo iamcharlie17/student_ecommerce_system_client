@@ -1,27 +1,44 @@
-import { Link } from "react-router-dom";
-import Button from "../Button";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../../components/Button";
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-
 import student from "../../assets/images/student.jpg";
+import { FcGoogle } from "react-icons/fc";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
-const Login = () => {
-  const [username, setUsername] = useState("");
+const Register = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const { register, loading } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ username, password });
+
+    if (!email.endsWith("@iut-dhaka.edu")) {
+      toast.error("Email must be a valid @iut-dhaka.edu address");
+      return;
+    }
+
+    try {
+      await register(fullName, email, password, navigate);
+      e.target.form.reset();
+    } catch (err) {
+      toast.error(err.response?.data?.message || "Registration failed");
+    }
   };
+
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center items-center text-black">
-      <div className="flex min-h-[90vh] bg-white  mx-8 w-full max-w-6xl">
+      <div className="flex min-h-[90vh] mx-8 w-full max-w-6xl bg-white">
         <div className="flex-1">
           <div className="h-full w-full">
             <img
               className="h-full w-full object-cover"
               src={student}
-              alt="Login visual"
+              alt="Register visual"
             />
           </div>
         </div>
@@ -29,15 +46,28 @@ const Login = () => {
         <div className="flex-1 flex flex-col justify-center items-center">
           <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
             <div>
-              <label htmlFor="username" className="block mb-1 text-gray-700">
-                Username
+              <label htmlFor="email" className="block mb-1 text-gray-700">
+                FullName
               </label>
               <input
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setFullName(e.target.value)}
                 type="text"
-                name="username"
-                id="username"
-                placeholder="user_name"
+                name="fullName"
+                id="fullName"
+                placeholder="Enter your name"
+                className="w-full border border-gray-300 px-4 py-2 rounded text-black"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block mb-1 text-gray-700">
+                Email
+              </label>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                name="email"
+                id="email"
+                placeholder="example@email.com"
                 className="w-full border border-gray-300 px-4 py-2 rounded text-black"
               />
             </div>
@@ -56,7 +86,7 @@ const Login = () => {
             </div>
 
             <div>
-              <Button type="success">Login</Button>
+              <Button type="success">Register</Button>
             </div>
           </form>
 
@@ -68,9 +98,11 @@ const Login = () => {
           </div>
 
           <div>
-            Do not have an account?{" "}
-            <Link to={"/register"}>
-              <span className="font-bold hover:cursor-pointer">Register</span>
+            Already have an account?{" "}
+            <Link to={"/login"}>
+              <span className="font-bold hover:cursor-pointer">
+                {loading ? "Wait..." : "Login"}
+              </span>
             </Link>
           </div>
         </div>
@@ -79,4 +111,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

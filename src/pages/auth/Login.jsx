@@ -1,37 +1,32 @@
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import Button from "../../components/Button";
 import { useState } from "react";
-import student from "../../assets/images/student.jpg";
 import { FcGoogle } from "react-icons/fc";
 
-const Register = () => {
+import student from "../../assets/images/student.jpg";
+
+const Login = () => {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({
-      email,
-      username,
-      password,
-    });
+    console.log({ email, password });
   };
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center items-center text-black">
-      <div className="flex min-h-[90vh] mx-8 w-full max-w-6xl bg-white">
+      <div className="flex min-h-[90vh] bg-white  mx-8 w-full max-w-6xl">
         <div className="flex-1">
           <div className="h-full w-full">
             <img
               className="h-full w-full object-cover"
               src={student}
-              alt="Register visual"
+              alt="Login visual"
             />
           </div>
         </div>
 
         <div className="flex-1 flex flex-col justify-center items-center">
-
           <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
             <div>
               <label htmlFor="email" className="block mb-1 text-gray-700">
@@ -43,19 +38,6 @@ const Register = () => {
                 name="email"
                 id="email"
                 placeholder="example@email.com"
-                className="w-full border border-gray-300 px-4 py-2 rounded text-black"
-              />
-            </div>
-            <div>
-              <label htmlFor="username" className="block mb-1 text-gray-700">
-                Username
-              </label>
-              <input
-                onChange={(e) => setUsername(e.target.value)}
-                type="text"
-                name="username"
-                id="username"
-                placeholder="user_name"
                 className="w-full border border-gray-300 px-4 py-2 rounded text-black"
               />
             </div>
@@ -74,7 +56,7 @@ const Register = () => {
             </div>
 
             <div>
-              <Button type="success">Register</Button>
+              <Button type="success">Login</Button>
             </div>
           </form>
 
@@ -86,9 +68,9 @@ const Register = () => {
           </div>
 
           <div>
-            Already have an account?{" "}
-            <Link to={"/login"}>
-              <span className="font-bold hover:cursor-pointer">Login</span>
+            Do not have an account?{" "}
+            <Link to={"/register"}>
+              <span className="font-bold hover:cursor-pointer">Register</span>
             </Link>
           </div>
         </div>
@@ -97,4 +79,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
