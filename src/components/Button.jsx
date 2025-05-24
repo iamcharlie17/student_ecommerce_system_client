@@ -1,0 +1,24 @@
+import React from "react";
+
+const colors = {
+  success: "#7ca942",
+  warning: "#f9990a",
+  danger: "#f44336",
+  info: "#233636",
+  primary: "#ec9a20",
+};
+
+const Button = ({ children, type = "primary" }) => {
+  const color = colors[type] || colors.primary;
+
+  return (
+    <button
+      style={{ backgroundColor: color }}
+      className="uppercase py-2 text-white font-semibold w-full my-4 cursor-pointer"
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;

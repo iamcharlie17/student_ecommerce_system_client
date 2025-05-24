@@ -1,0 +1,11 @@
+const colorOne = "F2F5EF"
+const colorTwo = "95A69C"
+const colorThree = "95A69C"
+const colorFour = "D64046"
+const colorFive = "233636"
+
+const success = "#7ca942"
+const warning = "#f9990a"
+const danger = "#f44336"
+const info = "#233636"
+const primary = "#ec9a20"
