@@ -12,11 +12,41 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import DashboardLayout from "./layouts/DashboardLayout.jsx";
 import MyService from "./pages/dashboard/MyService.jsx";
 import MyProducts from "./pages/dashboard/MyProducts.jsx";
+import ProductsProvider from "./providers/ProductsProvider.jsx";
+import PostItem from "./pages/post-item/PostItem.jsx";
+import PrivateRoute from "./routes/PrivateRoute.jsx";
+import MyAccount from "./pages/my-account/MyAccount.jsx";
+import AllItems from "./pages/all-items/AllItems.jsx";
+import ItemDetails from "./pages/item-details/ItemDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/post-item",
+    element: (
+      <PrivateRoute>
+        <PostItem />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/all-items",
+    element: <AllItems />,
+  },
+  {
+    path: "/item/:id",
+    element: <ItemDetails/>
+  },
+  {
+    path: "/account",
+    element: (
+      <PrivateRoute>
+        <MyAccount />
+      </PrivateRoute>
+    ),
   },
   {
     path: "/dashboard",
@@ -49,8 +79,10 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
-      <Toaster />
+      <ProductsProvider>
+        <RouterProvider router={router} />
+        <Toaster />
+      </ProductsProvider>
     </AuthProvider>
   </StrictMode>
 );

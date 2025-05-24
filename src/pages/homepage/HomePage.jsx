@@ -1,11 +1,16 @@
-import Hero from "../../components/Hero";
-import Nav from "../../components/Nav";
+import Category from "../../components/Category";
+import FeaturedItem from "../../components/FeaturedItem";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+
 
 const HomePage = () => {
     return (
         <div>
-            <Nav/>
-            <Hero/>
+            <Header/>
+            <Category/>
+            <FeaturedItem/>
+            <Footer/>
         </div>
     );
 };

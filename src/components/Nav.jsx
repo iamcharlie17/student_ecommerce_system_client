@@ -1,46 +1,46 @@
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Button from "./Button";
+import { FaRegUser } from "react-icons/fa";
+import { IoChatbubblesOutline } from "react-icons/io5";
 
 const Nav = () => {
   const { user } = useAuth();
   return (
-    <nav className={`w-full bg-[#5F6462]`}>
-      <div className="flex justify-between items-center mx-8">
-        <div>
-          <h1 className="font-bold text-3xl">CampusCart</h1>
-        </div>
-        <div>
-          {user ? (
-            <div className="flex gap-4 items-center">
-              <Link to={"/dashboard"}>
-                <h1 className="uppercase font-semibold">Dashboard</h1>
-              </Link>
-              <div className="w-32">
-                <Button type="danger">Logout</Button>
-              </div>
-            </div>
-          ) : (
-            <div className="flex gap-4 items-center">
-              <div className="flex gap-4 uppercase font-semibold">
-                <Link>
-                  <h1>Products</h1>
-                </Link>
-                <Link>
-                  <h1>Services</h1>
-                </Link>
-              </div>
-              <div className=" w-32">
-                <Link to={"/login"}>
-                  {" "}
-                  <Button type="success">Login</Button>
-                </Link>
-              </div>
-            </div>
-          )}
+    <div className="bg-blue-900 flex justify-between items-center">
+      <div className="flex-1">
+        <div className="flex gap-16 items-center">
+          <Link to={"/"}>
+            <h1 className="text-2xl">CampusCart</h1>
+          </Link>
+          <Link to={"/all-items"}>
+            <h1 className="uppercase">all Listings</h1>
+          </Link>
         </div>
       </div>
-    </nav>
+      <div className="flex gap-16 items-center">
+        <Link className="flex gap-2 items-center">
+          <IoChatbubblesOutline />
+          <h1>Chat</h1>
+        </Link>
+        <Link className="flex gap-2 items-center">
+          {user ? (
+            <>
+              <FaRegUser />
+              <Link to={"/account"}>Account</Link>
+            </>
+          ) : (
+            <>
+              <FaRegUser />
+              <Link to={"/login"}>Login</Link>
+            </>
+          )}
+        </Link>
+        <Link to={"/post-item"} className="w-32">
+          <Button type="primary">post item</Button>
+        </Link>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,47 @@
+[
+  {
+    "category": "mobile",
+    "title": "iPhone 12 Pro Max - 256GB",
+    "description": "Slightly used, excellent condition with box and accessories.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": "Dhaka",
+    "price": 95000,
+    "seller": "email@email.com"
+  },
+  {
+    "category": "electronics",
+    "title": "Sony Bravia 55\" 4K Smart TV",
+    "description": "Brand new, sealed pack with warranty.",
+    "condition": "new",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": "Chittagong",
+    "price": 78000,
+    "seller": "email@email.com"
+  },
+  {
+    "category": "vehicle",
+    "title": "Toyota Premio 2012",
+    "description": "Well-maintained car with fresh papers and CNG conversion.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": "Sylhet",
+    "price": 1250000,
+    "seller": "email@email.com"
+  }
+]

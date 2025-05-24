@@ -17,16 +17,15 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email.endsWith("@iut-dhaka.edu")) {
-      toast.error("Email must be a valid @iut-dhaka.edu address");
-      return;
-    }
+    // if (!email.endsWith("@iut-dhaka.edu")) {
+    //   toast.error("Email must be a valid @iut-dhaka.edu address");
+    //   return;
+    // }
 
     try {
       await register(fullName, email, password, navigate);
-      e.target.form.reset();
     } catch (err) {
-      toast.error(err.response?.data?.message || "Registration failed");
+      console.log(err);
     }
   };
 
@@ -100,9 +99,7 @@ const Register = () => {
           <div>
             Already have an account?{" "}
             <Link to={"/login"}>
-              <span className="font-bold hover:cursor-pointer">
-                Login
-              </span>
+              <span className="font-bold hover:cursor-pointer">Login</span>
             </Link>
           </div>
         </div>

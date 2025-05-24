@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Bluetooth Headphones",
+    "description": "High-quality over-ear headphones with noise cancellation and 20-hour battery life.",
+    "user": "john_doe",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Electronics",
+    "price": 59.99,
+    "condition": "New"
+  },
+  {
+    "id": 2,
+    "title": "Used MacBook Pro 2020",
+    "description": "MacBook Pro 13-inch with M1 chip, 8GB RAM, 256GB SSD. Lightly used and in excellent condition.",
+    "user": "tech_seller99",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Computers",
+    "price": 899.0,
+    "condition": "Used"
+  },
+  {
+    "id": 3,
+    "title": "Leather Office Chair",
+    "description": "Ergonomic leather office chair with adjustable height and lumbar support.",
+    "user": "furniture_guy",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Furniture",
+    "price": 120.0,
+    "condition": "New"
+  },
+  {
+    "id": 4,
+    "title": "Canon DSLR Camera",
+    "description": "Canon EOS 200D II with 18-55mm lens. Perfect for beginners and intermediate photographers.",
+    "user": "photo_lover",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Photography",
+    "price": 450.0,
+    "condition": "Used"
+  },
+  {
+    "id": 5,
+    "title": "Mountain Bike - 21 Speed",
+    "description": "Durable and lightweight mountain bike with 21-speed gears. Ideal for trail and city rides.",
+    "user": "biker123",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Sports",
+    "price": 299.99,
+    "condition": "New"
+  },
+  {
+    "id": 6,
+    "title": "Mountain Bike - 21 Speed",
+    "description": "Durable and lightweight mountain bike with 21-speed gears. Ideal for trail and city rides.",
+    "user": "biker123",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Sports",
+    "price": 299.99,
+    "condition": "New"
+  },
+  {
+    "id": 7,
+    "title": "Mountain Bike - 21 Speed",
+    "description": "Durable and lightweight mountain bike with 21-speed gears. Ideal for trail and city rides.",
+    "user": "biker123",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Sports",
+    "price": 299.99,
+    "condition": "New"
+  },
+  {
+    "id": 8,
+    "title": "Mountain Bike - 21 Speed",
+    "description": "Durable and lightweight mountain bike with 21-speed gears. Ideal for trail and city rides.",
+    "user": "biker123",
+    "image": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfvU58Oc0x7416U8ARJ_UeefCERvld_WcbQ&s"
+    ],
+    "category": "Sports",
+    "price": 299.99,
+    "condition": "New"
+  }
+]

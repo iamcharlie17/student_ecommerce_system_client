@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { axiosPublic } from "../hooks/useAxiosPublic";
-import axios from "axios";
 import toast from "react-hot-toast";
 import { axiosPrivate } from "../hooks/useAxiosPrivate";
 
@@ -10,35 +9,29 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({
     id: 1,
     name: "Charlie",
-    email: "charlie@iut-dhaka.edu",
+    email: "charlie@gmail.com"
   });
   const [loading, setLoading] = useState(false);
 
   const register = async (fullName, email, password, navigate) => {
     try {
       setLoading(true);
-      const response = await axiosPublic.post("api/auth/register", {
-        fullName,
-        email,
-        password,
+      const response = await axiosPublic.post("user_auth/register/", {
+        user: {
+          email: email,
+          password: password,
+        },
+        name: fullName,
+        role: "student",
       });
       if (response.data) {
-        toast.success(response?.data?.message);
-        localStorage.setItem("token", response?.data?.accessToken);
+        toast.success("Registration Success!!!");
+        localStorage.setItem("token", response?.data?.token);
         setUser(response?.data?.user);
         navigate("/");
-        setLoading(false);
       }
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        toast.error(
-          error?.response?.data?.message ||
-            "An error occurred while registering"
-        );
-      } else {
-        toast.error("An unexpected error occurred.");
-      }
-      setLoading(false);
+      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -46,26 +39,18 @@ const AuthProvider = ({ children }) => {
   const login = async (email, password, navigate) => {
     try {
       setLoading(true);
-      const response = await axiosPublic.post("api/auth/login", {
+      const response = await axiosPublic.post("user_auth/login/", {
         email,
         password,
       });
       if (response.data) {
-        toast.success(response?.data?.message);
-        localStorage.setItem("token", response.data?.accessToken);
+        toast.success("Login Success!!");
+        localStorage.setItem("token", response.data?.token);
         setUser(response.data?.user);
         navigate("/");
-        setLoading(false);
       }
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        toast.error(
-          error.response?.data?.message || "An error occurred while logging in."
-        );
-      } else {
-        toast.error("An unexpected error occurred.");
-      }
-      setLoading(false);
+      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -74,7 +59,8 @@ const AuthProvider = ({ children }) => {
 
   const getUser = async () => {
     try {
-      const response = await axiosPrivate.get("api/auth/user");
+      const response = await axiosPrivate.get("get_user/");
+      console.log(response);
       setUser(response.data);
     } catch (error) {
       console.log(error);

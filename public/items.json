@@ -1,0 +1,182 @@
+[
+  {
+    "id": 7,
+    "category": "mobile",
+    "title": "iPhone 12 Pro Max - 256GB",
+    "description": "Slightly used, excellent condition with box and accessories.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Dhaka",
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    "price": 95000,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 8,
+    "category": "electronics",
+    "title": "Sony Bravia 55\" 4K Smart TV",
+    "description": "Brand new, sealed pack with warranty.",
+    "condition": "new",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Chittagong",
+      "lat": 22.3569,
+      "lon": 91.7832
+    },
+    "price": 78000,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 9,
+    "category": "vehicle",
+    "title": "Toyota Premio 2012",
+    "description": "Well-maintained car with fresh papers and CNG conversion.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Sylhet",
+      "lat": 24.8949,
+      "lon": 91.8687
+    },
+    "price": 1250000,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 10,
+    "category": "pet",
+    "title": "Persian Cat (White)",
+    "description": "2 years old, vaccinated, and toilet trained.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Rajshahi",
+      "lat": 24.3636,
+      "lon": 88.6241
+    },
+    "price": 12000,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 11,
+    "category": "male_fashion",
+    "title": "Men’s Premium Blazer (Black)",
+    "description": "Brand new formal blazer, perfect for winter occasions.",
+    "condition": "new",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Dhaka",
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    "price": 3500,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 12,
+    "category": "female_fashion",
+    "title": "Georgette Saree with Embroidery",
+    "description": "Used only once, like new condition.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Barisal",
+      "lat": 22.7010,
+      "lon": 90.3535
+    },
+    "price": 2500,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 13,
+    "category": "education",
+    "title": "IELTS Course Subscription (1 Year)",
+    "description": "Premium access to British Council IELTS course.",
+    "condition": "new",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Dhaka",
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    "price": 12000,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 14,
+    "category": "tuition",
+    "title": "Math Tutor for Class 9-10",
+    "description": "Experienced math tutor available for home tuition.",
+    "condition": "new",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Comilla",
+      "lat": 23.4607,
+      "lon": 91.1809
+    },
+    "price": 5000,
+    "seller": "email@email.com"
+  },
+  {
+    "id": 15,
+    "category": "books",
+    "title": "JavaScript: The Good Parts",
+    "description": "Used programming book, slight wear on the cover.",
+    "condition": "used",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
+    ],
+    "location": {
+      "address": "Khulna",
+      "lat": 22.8456,
+      "lon": 89.5403
+    },
+    "price": 600,
+    "seller": "email@email.com"
+  }
+]
