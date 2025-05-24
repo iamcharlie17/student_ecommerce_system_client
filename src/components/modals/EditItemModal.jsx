@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { categories } from "../Category";
 import useProduct from "../../hooks/useProduct";
+import useAuth from "../../hooks/useAuth";
 
 const EditItemModal = ({ isOpen, onClose, item }) => {
   const { handleEditItem } = useProduct();
+  const {user} = useAuth();
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -71,7 +73,8 @@ const EditItemModal = ({ isOpen, onClose, item }) => {
         lon,
       },
       price: parseFloat(price),
-      sold: true
+      sold: true,
+      seller: user.id
     };
 
     await handleEditItem(updatedItem, item.id);

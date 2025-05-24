@@ -35,7 +35,7 @@ const ImageGallery = ({ images }) => {
               key={index}
               src={img}
               alt={`Thumbnail ${index}`}
-              className={`w-20 h-20 object-cover border-2 rounded cursor-pointer ${
+              className={`w-20 h-20 object-cover rounded cursor-pointer ${
                 selectedImage === img ? "border-blue-500" : "border-gray-300"
               }`}
               onClick={() => setSelectedImage(img)}
