@@ -12,13 +12,30 @@ const Nav = () => {
         </div>
         <div>
           {user ? (
-            ``
-          ) : (
-            <div className=" w-32">
-              <Link to={"/login"}>
-                {" "}
-                <Button type="success">Login</Button>
+            <div className="flex gap-4 items-center">
+              <Link to={"/dashboard"}>
+                <h1 className="uppercase font-semibold">Dashboard</h1>
               </Link>
+              <div className="w-32">
+                <Button type="danger">Logout</Button>
+              </div>
+            </div>
+          ) : (
+            <div className="flex gap-4 items-center">
+              <div className="flex gap-4 uppercase font-semibold">
+                <Link>
+                  <h1>Products</h1>
+                </Link>
+                <Link>
+                  <h1>Services</h1>
+                </Link>
+              </div>
+              <div className=" w-32">
+                <Link to={"/login"}>
+                  {" "}
+                  <Button type="success">Login</Button>
+                </Link>
+              </div>
             </div>
           )}
         </div>

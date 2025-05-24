@@ -1,5 +1,6 @@
 import Button from "./Button";
 import studentEcommerce from "../assets/images/student_ecommerce.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,8 +14,12 @@ const Hero = () => {
             the campus community.
           </p>
           <div className="flex justify-between gap-4 pr-32">
-            <Button>Login</Button>
-            <Button type="success">Registraion</Button>
+            <Link className="w-full">
+              <Button>Explore</Button>
+            </Link>
+            <Link to={"/register"} className="w-full">
+              <Button type="success">Registraion</Button>
+            </Link>
           </div>
         </div>
       </div>
