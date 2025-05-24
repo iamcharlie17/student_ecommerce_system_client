@@ -6,9 +6,6 @@
     "description": "Slightly used, excellent condition with box and accessories.",
     "condition": "used",
     "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -17,7 +14,8 @@
       "lon": 90.4125
     },
     "price": 95000,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "24 May, 2025 10:00 am"
   },
   {
     "id": 8,
@@ -26,9 +24,6 @@
     "description": "Brand new, sealed pack with warranty.",
     "condition": "new",
     "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -37,7 +32,8 @@
       "lon": 91.7832
     },
     "price": 78000,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "23 May, 2025 4:30 pm"
   },
   {
     "id": 9,
@@ -46,9 +42,6 @@
     "description": "Well-maintained car with fresh papers and CNG conversion.",
     "condition": "used",
     "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -57,7 +50,8 @@
       "lon": 91.8687
     },
     "price": 1250000,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "22 May, 2025 8:45 am"
   },
   {
     "id": 10,
@@ -66,9 +60,6 @@
     "description": "2 years old, vaccinated, and toilet trained.",
     "condition": "used",
     "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -77,7 +68,8 @@
       "lon": 88.6241
     },
     "price": 12000,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "21 May, 2025 5:10 pm"
   },
   {
     "id": 11,
@@ -86,9 +78,6 @@
     "description": "Brand new formal blazer, perfect for winter occasions.",
     "condition": "new",
     "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -97,7 +86,8 @@
       "lon": 90.4125
     },
     "price": 3500,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "20 May, 2025 11:25 am"
   },
   {
     "id": 12,
@@ -106,9 +96,6 @@
     "description": "Used only once, like new condition.",
     "condition": "used",
     "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -117,7 +104,8 @@
       "lon": 90.3535
     },
     "price": 2500,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "19 May, 2025 7:50 pm"
   },
   {
     "id": 13,
@@ -128,7 +116,6 @@
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
     ],
     "location": {
@@ -137,7 +124,8 @@
       "lon": 90.4125
     },
     "price": 12000,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "18 May, 2025 9:15 am"
   },
   {
     "id": 14,
@@ -157,26 +145,7 @@
       "lon": 91.1809
     },
     "price": 5000,
-    "seller": "email@email.com"
-  },
-  {
-    "id": 15,
-    "category": "books",
-    "title": "JavaScript: The Good Parts",
-    "description": "Used programming book, slight wear on the cover.",
-    "condition": "used",
-    "images": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_sL0_m1YXgijPwQEPuW_1hcBOYGvIXTSPnw&s"
-    ],
-    "location": {
-      "address": "Khulna",
-      "lat": 22.8456,
-      "lon": 89.5403
-    },
-    "price": 600,
-    "seller": "email@email.com"
+    "seller": "email@email.com",
+    "created_at": "17 May, 2025 4:40 pm"
   }
 ]
