@@ -14,7 +14,7 @@ const FeaturedItem = () => {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get("../../public/featured_items.json");
+      const res = await axios.get("/featured_items.json");
       setItems(res.data);
     } catch (error) {
       console.log(error);
