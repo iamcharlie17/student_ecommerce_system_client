@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { categories } from "../Category";
 import useProduct from "../../hooks/useProduct";
-import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const PostItemForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ const PostItemForm = () => {
     description: "",
     category: "",
     images: [],
+    condition: "new",
     location: {
       address: "",
       lat: 0,
@@ -18,7 +19,7 @@ const PostItemForm = () => {
   });
 
   const { handleAddNewProduct } = useProduct();
-  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -72,7 +73,7 @@ const PostItemForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await handleAddNewProduct({ ...formData, seller: user.email });
+    await handleAddNewProduct(formData, navigate);
   };
 
   return (

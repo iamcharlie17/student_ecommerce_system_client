@@ -32,7 +32,9 @@ const Nav = () => {
           ) : (
             <>
               <FaRegUser />
-              <Link to={"/login"}>Login</Link>
+              <Link to={"/login"}>
+                <h1>Login</h1>
+              </Link>
             </>
           )}
         </Link>
