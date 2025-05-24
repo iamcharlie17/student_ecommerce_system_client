@@ -3,134 +3,118 @@ import { categories } from "../Category";
 import useProduct from "../../hooks/useProduct";
 
 const EditItemModal = ({ isOpen, onClose, item }) => {
-  const [formData, setFormData] = useState(null);
-  const {handleEditItem} = useProduct();
-  const [title, setTitle] = useState(item.title);
-  const [description, setDescription] = useState(item.description);
-  const [category, setCategory] = useState(item.category);
-  const [images, setImages] = useState(item.images);
-  const [condition, setCondition] = useState(item.condition);
-  const [address, setAddress] = useState(item.location.address);
-  const [lat, setLat] = useState(item.location.lat);
-  const [lon, setLon] = useState(item.location.lon);
-  const [price, setPrice] = useState(item.price);
+  const { handleEditItem } = useProduct();
+
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
+  const [images, setImages] = useState([""]);
+  const [condition, setCondition] = useState("new");
+  const [address, setAddress] = useState("");
+  const [lat, setLat] = useState(0);
+  const [lon, setLon] = useState(0);
+  const [price, setPrice] = useState("");
 
   useEffect(() => {
     if (item) {
-      setFormData({
-        title: item.title || "",
-        description: item.description || "",
-        category: item.category || "",
-        images: item.images || [item.image || ""],
-        condition: item.condition || "new",
-        location: {
-          address: item?.location?.address || "",
-          lat: item?.location?.lat || 0,
-          lon: item?.location?.lon || 0,
-        },
-        price: item.price || "",
-      });
+      setTitle(item.title || "");
+      setDescription(item.description || "");
+      setCategory(item.category || "");
+      setImages(item.images || [item.image || ""]);
+      setCondition(item.condition || "new");
+      setAddress(item?.location?.address || "");
+      setLat(item?.location?.lat || 0);
+      setLon(item?.location?.lon || 0);
+      setPrice(item.price || "");
     }
   }, [item]);
 
-  const handleChange = async (e) => {
-    const { name, value } = e.target;
-
-    if (name === "address") {
-      setFormData((prev) => ({
-        ...prev,
-        location: { ...prev.location, address: value },
-      }));
-
-      try {
-        const response = await fetch(
-          `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
-            value
-          )}`
-        );
-        const data = await response.json();
-        if (data.length > 0) {
-          const { lat, lon } = data[0];
-          setFormData((prev) => ({
-            ...prev,
-            location: {
-              ...prev.location,
-              lat: parseFloat(lat),
-              lon: parseFloat(lon),
-            },
-          }));
-        }
-      } catch (error) {
-        console.error("Geocoding failed:", error);
+  const handleAddressChange = async (value) => {
+    setAddress(value);
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(value)}`
+      );
+      const data = await response.json();
+      if (data.length > 0) {
+        const { lat, lon } = data[0];
+        setLat(parseFloat(lat));
+        setLon(parseFloat(lon));
       }
-
-      return;
+    } catch (error) {
+      console.error("Geocoding failed:", error);
     }
-
-    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleImageChange = (index, value) => {
-    const updated = [...formData.images];
-    updated[index] = value;
-    setFormData({ ...formData, images: updated });
+    const updatedImages = [...images];
+    updatedImages[index] = value;
+    setImages(updatedImages);
   };
 
   const handleAddImage = () => {
-    setFormData((prev) => ({
-      ...prev,
-      images: [...prev.images, ""],
-    }));
+    setImages((prev) => [...prev, ""]);
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    await handleEditItem(item, item.id);
+
+    const updatedItem = {
+      title,
+      description,
+      category,
+      images,
+      condition,
+      location: {
+        address,
+        lat,
+        lon,
+      },
+      price: parseFloat(price),
+      sold: true
+    };
+
+    await handleEditItem(updatedItem, item.id);
     onClose();
   };
 
-  if (!isOpen || !formData) return null;
+  if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-transparent flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-3xl p-6 rounded-lg shadow-lg overflow-auto max-h-[90vh]">
         <h2 className="text-xl font-bold mb-4">Edit Item</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             placeholder="Title"
             className="w-full border p-2 rounded"
           />
           <input
             type="text"
-            name="address"
-            value={formData.location.address}
-            onChange={handleChange}
+            value={address}
+            onChange={(e) => handleAddressChange(e.target.value)}
             placeholder="Location"
             className="w-full border p-2 rounded"
           />
           <input
             type="number"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
             placeholder="Price"
             className="w-full border p-2 rounded"
           />
           <textarea
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
             className="w-full border p-2 rounded"
             placeholder="Description"
           />
           <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
             className="w-full border p-2 rounded"
           >
             <option value="">Select Category</option>
@@ -140,7 +124,7 @@ const EditItemModal = ({ isOpen, onClose, item }) => {
               </option>
             ))}
           </select>
-          {formData.images.map((img, index) => (
+          {images.map((img, index) => (
             <input
               key={index}
               type="text"

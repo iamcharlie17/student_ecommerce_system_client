@@ -13,7 +13,7 @@ const UserItemRow = ({ item, idx }) => {
         <td className="px-4 py-3">
           <div className="h-12 w-12 overflow-hidden rounded-md">
             <img
-              src={item.image}
+              src={item.images}
               alt="Item img"
               className="w-full h-full object-cover"
             />
