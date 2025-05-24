@@ -1,17 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 
 import student from "../../assets/images/student.jpg";
+import toast from "react-hot-toast";
+import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const {login, loading} = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ email, password });
+    try {
+      await login(email, password, navigate);
+    } catch (err) {
+      toast.error(err.response?.data?.message || "Login failed");
+    }
   };
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center items-center text-black">
@@ -56,7 +65,7 @@ const Login = () => {
             </div>
 
             <div>
-              <Button type="success">Login</Button>
+              <Button type="success">{loading ? "Wait..." : "Login"}</Button>
             </div>
           </form>
 

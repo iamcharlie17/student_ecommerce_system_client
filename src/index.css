@@ -1,2 +1,11 @@
 @import "tailwindcss";
+@theme {
+  --color-green_white: '#F2F5EF';
+  --color-pewter: "#95A69C";
+  --color-carrot_orange: "#95A69C";
+  --color-brown_rust: "#D64046";
+  --color-outer_space: "#233636";
+}
 @plugin "daisyui";
+
+

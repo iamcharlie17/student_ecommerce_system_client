@@ -86,7 +86,7 @@ const Register = () => {
             </div>
 
             <div>
-              <Button type="success">Register</Button>
+              <Button type="success">{loading ? "Wait..." : "Register"}</Button>
             </div>
           </form>
 
@@ -101,7 +101,7 @@ const Register = () => {
             Already have an account?{" "}
             <Link to={"/login"}>
               <span className="font-bold hover:cursor-pointer">
-                {loading ? "Wait..." : "Login"}
+                Login
               </span>
             </Link>
           </div>
