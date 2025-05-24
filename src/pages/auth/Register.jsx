@@ -4,6 +4,7 @@ import { useState } from "react";
 import student from "../../assets/images/student.jpg";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 // import toast from "react-hot-toast";
 
 const Register = () => {
