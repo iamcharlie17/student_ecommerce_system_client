@@ -7,7 +7,7 @@ const FilterByUniversity = () => {
         name="university"
         id="university"
         className="border w-full p-2 rounded-full"
-        placeholder="Enter Uni name"
+        placeholder="Enter University name"
       />
     </div>
   );

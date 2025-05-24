@@ -18,6 +18,8 @@ import PrivateRoute from "./routes/PrivateRoute.jsx";
 import MyAccount from "./pages/my-account/MyAccount.jsx";
 import AllItems from "./pages/all-items/AllItems.jsx";
 import ItemDetails from "./pages/item-details/ItemDetails.jsx";
+import MyAccountLayout from "./layouts/MyAccountLayout.jsx";
+import Ads from "./components/stu-dashboard/Ads.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,11 +44,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/account",
-    element: (
-      <PrivateRoute>
-        <MyAccount />
-      </PrivateRoute>
-    ),
+    element: <MyAccountLayout/>,
+    children: [
+      {
+        index: true,
+        element: <Ads/>
+      }
+    ]
   },
   {
     path: "/dashboard",

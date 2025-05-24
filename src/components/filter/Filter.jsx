@@ -4,6 +4,7 @@ import Price from "./Price";
 import FitlterByCategory from "./FitlterByCategory";
 import FilterByLocation from "./FilterByLocation";
 import FilterByCondition from "./FilerByCondition";
+import FilterByUniversity from "./FilterByUniversity";
 
 const Filter = () => {
   return (
@@ -11,7 +12,7 @@ const Filter = () => {
       <Search />
       <Price />
       <FilterByLocation />
-      <FilterByLocation />
+      <FilterByUniversity />
       <div className="flex">
         <FitlterByCategory categories={categories} />
         <FilterByCondition />

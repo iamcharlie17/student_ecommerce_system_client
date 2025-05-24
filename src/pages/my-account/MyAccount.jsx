@@ -3,8 +3,11 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaBriefcase } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const MyAccount = () => {
+    const {user} = useAuth();
+    console.log(user);
   return (
     <div>
       <Header />
@@ -48,7 +51,7 @@ const MyAccount = () => {
 
           {/* Main Content */}
           <main className="flex-1 flex flex-col justify-center items-center text-center p-6">
-            <h2 className="text-lg font-semibold mb-2">117_Riyad Hosen</h2>
+            <h2 className="text-lg font-semibold mb-2">Dear {user?.name},</h2>
             <div className="flex flex-col items-center mt-10">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"

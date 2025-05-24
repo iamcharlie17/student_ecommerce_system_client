@@ -6,11 +6,8 @@ import { axiosPrivate } from "../hooks/useAxiosPrivate";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    id: 1,
-    name: "Charlie",
-    email: "charlie@gmail.com"
-  });
+  const [user, setUser] = useState();
+  const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const register = async (fullName, email, password, navigate) => {
@@ -59,9 +56,9 @@ const AuthProvider = ({ children }) => {
 
   const getUser = async () => {
     try {
-      const response = await axiosPrivate.get("get_user/");
-      console.log(response);
-      setUser(response.data);
+      const response = await axiosPrivate.get("/user_auth/get_user/");
+      setUser(response.data.user);
+      setStatus(response.data.status);
     } catch (error) {
       console.log(error);
     }
@@ -71,7 +68,7 @@ const AuthProvider = ({ children }) => {
     getUser();
   }, []);
   return (
-    <AuthContext.Provider value={{ user, loading, register, login, logout }}>
+    <AuthContext.Provider value={{ user, loading, register, login, logout, status }}>
       {children}
     </AuthContext.Provider>
   );

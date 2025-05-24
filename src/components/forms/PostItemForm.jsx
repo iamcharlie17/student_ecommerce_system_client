@@ -1,19 +1,59 @@
 import React, { useState } from "react";
 import { categories } from "../Category";
+import useProduct from "../../hooks/useProduct";
+import useAuth from "../../hooks/useAuth";
 
 const PostItemForm = () => {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
     category: "",
-    condition: "used",
     images: [],
-    location: "",
-    price: ""
+    location: {
+      address: "",
+      lat: 0,
+      lon: 0,
+    },
+    price: "",
   });
 
-  const handleChange = (e) => {
+  const { handleAddNewProduct } = useProduct();
+  const { user } = useAuth();
+
+  const handleChange = async (e) => {
     const { name, value } = e.target;
+
+    if (name === "address") {
+      setFormData((prev) => ({
+        ...prev,
+        location: { ...prev.location, address: value },
+      }));
+
+      try {
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+            value
+          )}`
+        );
+        const data = await response.json();
+        if (data && data.length > 0) {
+          const { lat, lon } = data[0];
+          setFormData((prev) => ({
+            ...prev,
+            location: {
+              ...prev.location,
+              lat: parseFloat(lat),
+              lon: parseFloat(lon),
+            },
+          }));
+        }
+      } catch (error) {
+        console.error("Geocoding failed:", error);
+      }
+
+      return;
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -26,13 +66,13 @@ const PostItemForm = () => {
   const handleAddImage = () => {
     setFormData((prev) => ({
       ...prev,
-      images: [...prev.images, ""]
+      images: [...prev.images, ""],
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted Data:", formData);
+    await handleAddNewProduct({ ...formData, seller: user.email });
   };
 
   return (
@@ -52,10 +92,10 @@ const PostItemForm = () => {
 
         <input
           type="text"
-          name="location"
-          value={formData.location}
+          name="address"
+          value={formData.location.address}
           onChange={handleChange}
-          placeholder="Location"
+          placeholder="Location Address"
           className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
 
