@@ -3,7 +3,7 @@ const SingleItem = ({ item }) => {
     <div className="shadow-xl rounded-lg p-4 bg-white shadow hover:shadow-md transition">
       <img
         className="w-full h-48 object-cover rounded-md mb-4"
-        src={item.images || "https://via.placeholder.com/300"}
+        src={item.images.length > 0 && item.images[0]}
         alt={item.title}
       />
       <div className="text-gray-800">

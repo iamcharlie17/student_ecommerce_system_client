@@ -75,6 +75,8 @@ const ItemsProvider = ({ children }) => {
     }
   }
 
+  
+
   return (
     <ProductContext.Provider
       value={{ items, handleDeleteItem, handleAddNewProduct, loading, handleEditItem }}
