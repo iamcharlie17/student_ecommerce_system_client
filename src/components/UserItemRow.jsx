@@ -3,12 +3,8 @@ import useProduct from "../hooks/useProduct";
 import EditItemModal from "./modals/EditItemModal";
 
 const UserItemRow = ({ item, idx }) => {
-  const { handleDeleteItem, handleUpdateItem } = useProduct();
+  const { handleDeleteItem } = useProduct();
   const [showModal, setShowModal] = useState(false);
-
-  const handleModalSubmit = async (id, updatedData) => {
-    await handleUpdateItem(id, updatedData);
-  };
 
   return (
     <>
@@ -47,7 +43,6 @@ const UserItemRow = ({ item, idx }) => {
         isOpen={showModal}
         onClose={() => setShowModal(false)}
         item={item}
-        onSubmit={handleModalSubmit}
       />
     </>
   );

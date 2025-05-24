@@ -41,6 +41,7 @@ const ItemsProvider = ({ children }) => {
   };
 
   const handleAddNewProduct = async (product, navigate) => {
+    console.log(product);
     try {
       setLoading(true);
       const res = await axiosPrivate.post("/products/create/", product);
@@ -59,9 +60,24 @@ const ItemsProvider = ({ children }) => {
     }
   };
 
+  const handleEditItem = async (item, id) =>{
+    console.log(item);
+    try {
+        setLoading(true);
+        const res = await axiosPrivate.put(`/products/update/${id}/`, item);
+        if(res.status == 200) {
+            setControl(!control);
+        }
+    } catch (error) {
+        console.log(error);
+    }finally{
+        setLoading(false);
+    }
+  }
+
   return (
     <ProductContext.Provider
-      value={{ items, handleDeleteItem, handleAddNewProduct, loading }}
+      value={{ items, handleDeleteItem, handleAddNewProduct, loading, handleEditItem }}
     >
       {children}
     </ProductContext.Provider>

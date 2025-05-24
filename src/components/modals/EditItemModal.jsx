@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { categories } from "../Category";
+import useProduct from "../../hooks/useProduct";
 
 const EditItemModal = ({ isOpen, onClose, item }) => {
   const [formData, setFormData] = useState(null);
+  const {handleEditItem} = useProduct();
+  const [title, setTitle] = useState(item.title);
+  const [description, setDescription] = useState(item.description);
+  const [category, setCategory] = useState(item.category);
+  const [images, setImages] = useState(item.images);
+  const [condition, setCondition] = useState(item.condition);
+  const [address, setAddress] = useState(item.location.address);
+  const [lat, setLat] = useState(item.location.lat);
+  const [lon, setLon] = useState(item.location.lon);
+  const [price, setPrice] = useState(item.price);
 
   useEffect(() => {
     if (item) {
@@ -72,9 +83,9 @@ const EditItemModal = ({ isOpen, onClose, item }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(formData)
+    await handleEditItem(item, item.id);
     onClose();
   };
 
